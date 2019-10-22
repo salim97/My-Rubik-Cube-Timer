@@ -81,6 +81,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.4"
+  intl:
+    dependency: "direct main"
+    description:
+      name: intl
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.16.0"
   matcher:
     dependency: transitive
     description:
@@ -123,13 +130,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
-  segment_display:
-    dependency: "direct main"
-    description:
-      name: segment_display
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.0"
   sky_engine:
     dependency: transitive
     description: flutter

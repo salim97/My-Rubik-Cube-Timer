@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:segment_display/segment_display.dart';
+import 'package:intl/intl.dart';
+import 'package:intl/intl_browser.dart';
 
 void main() => runApp(MyApp());
 
@@ -50,7 +50,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   double counter = 0;
-  String counterString = "0.00";
+  String counterString = "00:00.000";
   double tmp;
   Timer timer = null;
   Random rng = new Random();
@@ -72,6 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
           counter += 0.1;
           tmp = counter + (rng.nextInt(99) / 1000).toDouble();
           counterString = tmp.toStringAsFixed(3);
+          
+          counterString = DateFormat('mm:ss.SS').format(DateTime.fromMillisecondsSinceEpoch((tmp*1000).toInt()));
         });
       });
   }
